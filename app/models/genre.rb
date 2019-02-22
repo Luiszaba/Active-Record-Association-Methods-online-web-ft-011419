@@ -11,8 +11,7 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    artist_array = []
-    artist_array = self.artists.size
-    artist_array.save
+    self.artists.map do |a|
+      a.name
   end
 end
